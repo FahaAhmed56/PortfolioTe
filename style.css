@@ -1,0 +1,154 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4; /* Soft warm grey */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #2c3e50, #4a6375); /* Muted navy → grey-blue */
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem 5rem;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Backup smooth scroll */
+}
+
+
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #dbe4ea; /* Muted light grey-blue */
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    min-height: 1.5em;
+}
+
+/* ===== Section Cards ===== */
+section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #fafafa; /* Soft off-white */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2e8b8f; /* Muted teal accent */
+    border-bottom: 2px solid #b2d8d8;
+    padding-bottom: 0.3rem;
+}
+
+section p, section li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* ===== Lists ===== */
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+ul li::before {
+    content: "• ";
+    color: #2e8b8f; /* Accent teal */
+    font-weight: bold;
+}
+
+/* ===== Links ===== */
+a {
+    color: #2e8b8f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #1d5c5f;
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: white;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #b2d8d8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
